@@ -29,7 +29,7 @@ def init_db():
 
 @click.command('init-db')
 def init_db_command():
-    """Create new tables."""
+    """Clear the existing data Create new tables."""
     init_db()
     click.echo('Initialized the database.')
 
