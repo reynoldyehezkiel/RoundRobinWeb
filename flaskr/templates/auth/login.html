@@ -1,15 +1,38 @@
 {% extends 'base.html' %}
 
 {% block header %}
-  <h1>{% block title %}Log In{% endblock %}</h1>
+<!--  <h1>{% block title %}Log In{% endblock %}</h1>-->
 {% endblock %}
 
 {% block content %}
-  <form method="post">
-    <label for="username">Username</label>
-    <input name="username" id="username" required>
-    <label for="password">Password</label>
-    <input type="password" name="password" id="password" required>
-    <input type="submit" value="Log In">
-  </form>
+<section>
+
+    <div class="flex items-center justify-center min-h-screen bg-gray-100">
+        <div class="bg-white p-8 rounded-2xl shadow-lg w-full max-w-sm border border-gray-200 relative overflow-hidden">
+            <form method="POST">
+
+                <div class="relative">
+                    <input placeholder="username" name="username"
+                           class="mt-1 w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none">
+                </div>
+
+                <div class="relative mt-4">
+                    <input type="password" placeholder="password" name="password"
+                           class="mt-1 w-full px-3 py-2 border border-gray-300 rounded-md  focus:outline-none">
+                </div>
+
+                <div class="flex items-center justify-between mt-4">
+                    <label class="flex items-center text-sm text-gray-600">
+                        <input type="checkbox" class="mr-2 border-gray-300"> Remember me
+                    </label>
+                    <a href="#" class="text-sm text-blue-500 hover:underline">Forgot password?</a>
+                </div>
+
+                <button class="mt-6 w-full bg-indigo-600 hover:bg-indigo-700 text-white py-2 rounded-md text-center font-semibold">
+                    Sign In
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
 {% endblock %}
